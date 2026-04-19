@@ -1,6 +1,3 @@
-parse:
-  phoneme_set: "vowels"
-
 acoustics:
   max_formant_female: 5000
   max_formant_male: 4500
