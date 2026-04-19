@@ -10,24 +10,20 @@ stages:
       nfiles: 5930
     - path: src/parse_corpus.py
       hash: md5
-      md5: 5b4f6a7753781aeb18a9d4d6fdf326bb
-      size: 3324
-    params:
-      params.yaml:
-        parse:
-          phoneme_set: vowels
+      md5: b9c2833d655d19d902670dc06b17baf3
+      size: 3822
     outs:
     - path: data/parsed/phonemes.csv
       hash: md5
-      md5: 0df4efe46f85989bfc7ea255d1fd30f9
-      size: 3378525
+      md5: 117aff9d68da88f7d1813f5fa66a3ddd
+      size: 3684250
   extract_acoustics:
     cmd: python src/extract_acoustics.py
     deps:
     - path: data/parsed/phonemes.csv
       hash: md5
-      md5: 0df4efe46f85989bfc7ea255d1fd30f9
-      size: 3378525
+      md5: 117aff9d68da88f7d1813f5fa66a3ddd
+      size: 3684250
     - path: src/extract_acoustics.py
       hash: md5
       md5: 48f4598308dd5dd8d44caaeae8dbe0ad
@@ -41,5 +37,42 @@ stages:
     outs:
     - path: data/features/features_acoustic.csv
       hash: md5
-      md5: 88759b7457957d609267ff985f4139b3
-      size: 4864332
+      md5: 0e6592b00a62546e01a913c852d48eae
+      size: 5179416
+  normalise:
+    cmd: python src/normalise.py
+    deps:
+    - path: data/features/features_acoustic.csv
+      hash: md5
+      md5: 0e6592b00a62546e01a913c852d48eae
+      size: 5179416
+    - path: data/features/features_whisper.npz
+      hash: md5
+      md5: 96721eec2b4465cb32adedad7630a0df
+      size: 99400424
+    - path: data/features/features_xlsr.npz
+      hash: md5
+      md5: 83e412a130c2fe022162b7d5a892ad8c
+      size: 99519208
+    - path: src/normalise.py
+      hash: md5
+      md5: c9890c5d6622dc8874c87d15eb49575d
+      size: 2076
+    params:
+      params.yaml:
+        normalise:
+          pca_dims_viz: 2
+          pca_dims_clustering: 50
+    outs:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 8060b3a25cb2866ade392b32ca4a1265
+      size: 6033476
+    - path: data/features/features_whisper_pca.npz
+      hash: md5
+      md5: a63bcf869b4f030e27e4da0ffebc669a
+      size: 4767664
+    - path: data/features/features_xlsr_pca.npz
+      hash: md5
+      md5: 86ada39a8ba345bab273c2c41150b245
+      size: 9534816

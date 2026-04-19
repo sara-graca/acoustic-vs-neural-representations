@@ -4,9 +4,6 @@ stages:
     deps:
       - data/raw/ru-fr_interference
       - src/parse_corpus.py
-    params:
-      - params.yaml:
-          - parse
     outs:
       - data/parsed/phonemes.csv
 
@@ -20,3 +17,21 @@ stages:
             - acoustics
       outs:
         - data/features/features_acoustic.csv
+
+  # extract_neural_whisper and extract_neural_xlsr were run on Kaggle (GPU required)
+  # outputs tracked manually via dvc add
+  
+  normalise:
+    cmd: python src/normalise.py
+    deps:
+      - data/features/features_acoustic.csv
+      - data/features/features_whisper.npz
+      - data/features/features_xlsr.npz
+      - src/normalise.py
+    params:
+      - params.yaml:
+          - normalise
+    outs:
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_pca.npz
+      - data/features/features_xlsr_pca.npz
