@@ -1,0 +1,19 @@
+parse:
+  phoneme_set: "vowels"
+
+acoustics:
+  max_formant_female: 5000
+  max_formant_male: 4500
+  n_formants: 5
+
+whisper:
+  model: "openai/whisper-medium"
+  layer: 20
+
+xlsr:
+  model: "facebook/wav2vec2-large-xlsr-53"
+  layer: 10
+
+normalise:
+  pca_dims_viz: 2
+  pca_dims_clustering: 50

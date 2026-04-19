@@ -1,0 +1,11 @@
+stages:
+  parse_corpus:
+    cmd: python src/parse_corpus.py
+    deps:
+      - data/raw/ru-fr_interference
+      - src/parse_corpus.py
+    params:
+      - params.yaml:
+          - parse
+    outs:
+      - data/parsed/phonemes.csv

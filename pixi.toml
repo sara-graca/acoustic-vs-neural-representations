@@ -1,0 +1,17 @@
+[workspace]
+authors = ["sara-graca <saravsgraca@gmail.com>"]
+channels = ["conda-forge"]
+name = "acoustic-vs-neural-representations"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+dvc = ">=3.67.1,<4"
+pandas = ">=3.0.2,<4"
+numpy = ">=2.4.3,<3"
+scikit-learn = ">=1.8.0,<2"
+
+[pypi-dependencies]
+tgt = "*"

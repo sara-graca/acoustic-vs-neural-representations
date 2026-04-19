@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  parse_corpus:
+    cmd: python src/parse_corpus.py
+    deps:
+    - path: data/raw/ru-fr_interference
+      hash: md5
+      md5: 36f49f9618bbbb6f9e1ceb95f8c45faf.dir
+      size: 738309514
+      nfiles: 5930
+    - path: src/parse_corpus.py
+      hash: md5
+      md5: e1124c00596dfb7be0aaa4b87f6ccf6b
+      size: 3421
+    params:
+      params.yaml:
+        parse:
+          phoneme_set: vowels
+    outs:
+    - path: data/parsed/phonemes.csv
+      hash: md5
+      md5: c48453aa0d2044beb7394272c8b23439
+      size: 3516047
