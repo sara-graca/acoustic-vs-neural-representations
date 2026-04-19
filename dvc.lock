@@ -10,8 +10,8 @@ stages:
       nfiles: 5930
     - path: src/parse_corpus.py
       hash: md5
-      md5: e1124c00596dfb7be0aaa4b87f6ccf6b
-      size: 3421
+      md5: 5b4f6a7753781aeb18a9d4d6fdf326bb
+      size: 3324
     params:
       params.yaml:
         parse:
@@ -19,5 +19,27 @@ stages:
     outs:
     - path: data/parsed/phonemes.csv
       hash: md5
-      md5: c48453aa0d2044beb7394272c8b23439
-      size: 3516047
+      md5: 0df4efe46f85989bfc7ea255d1fd30f9
+      size: 3378525
+  extract_acoustics:
+    cmd: python src/extract_acoustics.py
+    deps:
+    - path: data/parsed/phonemes.csv
+      hash: md5
+      md5: 0df4efe46f85989bfc7ea255d1fd30f9
+      size: 3378525
+    - path: src/extract_acoustics.py
+      hash: md5
+      md5: 48f4598308dd5dd8d44caaeae8dbe0ad
+      size: 2262
+    params:
+      params.yaml:
+        acoustics:
+          max_formant_female: 5000
+          max_formant_male: 4500
+          n_formants: 5
+    outs:
+    - path: data/features/features_acoustic.csv
+      hash: md5
+      md5: 88759b7457957d609267ff985f4139b3
+      size: 4864332

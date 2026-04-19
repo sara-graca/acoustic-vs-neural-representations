@@ -212,6 +212,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/yarl-1.23.0-pyh7db6752_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zc.lockfile-4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
+      - pypi: https://files.pythonhosted.org/packages/38/d4/bbc8153bde9812b33714c210b41ddb50d5af56a6d155f23ee44a01724146/praat_parselmouth-0.4.7-cp314-cp314-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/e1/b2/98c733f6ef24e1f29b23f0f536e5e2fbcadc56493c9a36be7ff7a8181638/tgt-1.5-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
@@ -2053,6 +2054,13 @@ packages:
   - pkg:pypi/platformdirs?source=compressed-mapping
   size: 25862
   timestamp: 1775741140609
+- pypi: https://files.pythonhosted.org/packages/38/d4/bbc8153bde9812b33714c210b41ddb50d5af56a6d155f23ee44a01724146/praat_parselmouth-0.4.7-cp314-cp314-win_amd64.whl
+  name: praat-parselmouth
+  version: 0.4.7
+  sha256: aa467b5839fa9dd6e1aff146a80e80e157aedc93825772dfb4258f772c062ebb
+  requires_dist:
+  - numpy>=1.7.0
+  requires_python: '>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*'
 - conda: https://conda.anaconda.org/conda-forge/noarch/prompt-toolkit-3.0.52-pyha770c72_0.conda
   sha256: 4817651a276016f3838957bfdf963386438c70761e9faec7749d411635979bae
   md5: edb16f14d920fb3faf17f5ce582942d6

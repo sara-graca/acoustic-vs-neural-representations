@@ -56,7 +56,6 @@ for speaker_folder in sorted(os.listdir(CORPUS_DIR)):
             continue
 
         sent_id = match.group("sent_id")   # e.g. FRcorp1
-        list_id = match.group("list")      # e.g. list1
 
         tg_path = os.path.join(speaker_path, filename)
         wav_path = tg_path.replace(".TextGrid", ".wav")
@@ -85,7 +84,6 @@ for speaker_folder in sorted(os.listdir(CORPUS_DIR)):
                 "speaker_id": spk_id,
                 "l1_status":  l1,
                 "gender":     gender,
-                "list_id":    list_id,
                 "sentence_id": sent_id,
                 "phoneme":    label,
                 "onset":      interval.start_time,

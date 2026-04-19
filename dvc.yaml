@@ -9,3 +9,14 @@ stages:
           - parse
     outs:
       - data/parsed/phonemes.csv
+
+  extract_acoustics:
+      cmd: python src/extract_acoustics.py
+      deps:
+        - data/parsed/phonemes.csv
+        - src/extract_acoustics.py
+      params:
+        - params.yaml:
+            - acoustics
+      outs:
+        - data/features/features_acoustic.csv
