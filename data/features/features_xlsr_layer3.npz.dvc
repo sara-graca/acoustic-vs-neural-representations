@@ -1,0 +1,5 @@
+outs:
+- md5: 908ea5960712efe82468be5dbb36b15e
+  size: 99519208
+  hash: md5
+  path: features_xlsr_layer3.npz

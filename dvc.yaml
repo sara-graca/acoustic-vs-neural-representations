@@ -28,6 +28,8 @@ stages:
       - data/features/features_whisper.npz
       - data/features/features_xlsr.npz
       - src/normalise.py
+      - data/features/features_whisper_layer4.npz
+      - data/features/features_xlsr_layer3.npz
     params:
       - params.yaml:
           - normalise
@@ -35,3 +37,5 @@ stages:
       - data/features/features_acoustic_norm.csv
       - data/features/features_whisper_pca.npz
       - data/features/features_xlsr_pca.npz
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz

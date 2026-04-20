@@ -15,6 +15,7 @@ scikit-learn = ">=1.8.0,<2"
 transformers = "*"
 tqdm = "*"
 chardet = ">=5.2.0,<6"
+ipykernel = "*"
 
 [pypi-dependencies]
 tgt = "*"

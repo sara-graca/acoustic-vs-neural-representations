@@ -4,3 +4,5 @@
 /features_acoustic_norm.csv
 /features_whisper_pca.npz
 /features_xlsr_pca.npz
+/features_whisper_layer4.npz
+/features_xlsr_layer3.npz

@@ -56,4 +56,6 @@ def apply_pca(npz_path, out_path, n_viz, n_clust):
     print(f"PCA done → {out_path} | viz: {X_viz.shape} | clustering: {X_clust.shape}")
 
 apply_pca(WHISPER_IN, WHISPER_PCA_OUT, PCA_VIZ, PCA_CLUSTERING)
-apply_pca(XLSR_IN,    XLSR_PCA_OUT,    PCA_VIZ, PCA_CLUSTERING)
+apply_pca(XLSR_IN, XLSR_PCA_OUT, PCA_VIZ, PCA_CLUSTERING)
+apply_pca("data/features/features_whisper_layer4.npz", "data/features/features_whisper_layer4_pca.npz", PCA_VIZ, PCA_CLUSTERING)
+apply_pca("data/features/features_xlsr_layer3.npz", "data/features/features_xlsr_layer3_pca.npz", PCA_VIZ, PCA_CLUSTERING)
