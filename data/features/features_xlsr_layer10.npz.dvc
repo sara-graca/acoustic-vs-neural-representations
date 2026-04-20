@@ -2,4 +2,4 @@ outs:
 - md5: 83e412a130c2fe022162b7d5a892ad8c
   size: 99519208
   hash: md5
-  path: features_xlsr.npz
+  path: features_xlsr_layer10.npz

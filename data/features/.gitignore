@@ -1,9 +1,9 @@
 /features_acoustic.csv
-/features_whisper.npz
-/features_xlsr.npz
+/features_whisper_layer20.npz
+/features_xlsr_layer10.npz
 /features_acoustic_norm.csv
-/features_whisper_pca.npz
-/features_xlsr_pca.npz
+/features_whisper_layer20_pca.npz
+/features_xlsr_layer10_pca.npz
 /features_whisper_layer4.npz
 /features_xlsr_layer3.npz
 /features_whisper_layer4_pca.npz

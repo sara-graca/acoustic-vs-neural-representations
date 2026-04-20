@@ -46,7 +46,7 @@ stages:
       hash: md5
       md5: ef465e59f67c672f6de859ad1c0f6327
       size: 5176833
-    - path: data/features/features_whisper.npz
+    - path: data/features/features_whisper_layer20.npz
       hash: md5
       md5: 96721eec2b4465cb32adedad7630a0df
       size: 99400424
@@ -54,7 +54,7 @@ stages:
       hash: md5
       md5: a5afa0ca414d85c71b179d751a3c2d06
       size: 99400424
-    - path: data/features/features_xlsr.npz
+    - path: data/features/features_xlsr_layer10.npz
       hash: md5
       md5: 83e412a130c2fe022162b7d5a892ad8c
       size: 99519208
@@ -64,8 +64,8 @@ stages:
       size: 99519208
     - path: src/normalise.py
       hash: md5
-      md5: ae503d677a5663376e444fca6a84ca17
-      size: 2324
+      md5: 7b29ca43ad985e2449ee2d14917f1294
+      size: 2111
     params:
       params.yaml:
         normalise:
@@ -76,19 +76,19 @@ stages:
       hash: md5
       md5: 9b83c2842d94385c23c6b4f99debbd7b
       size: 6030893
+    - path: data/features/features_whisper_layer20_pca.npz
+      hash: md5
+      md5: 10525ae8fb5cd7e1d043a88b391b8820
+      size: 4767664
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 9d8cc144d335ed8b824b91d8bfdb2dcd
+      md5: dcef5d0ecc84f9b8a3048de1a814cde2
       size: 4767664
-    - path: data/features/features_whisper_pca.npz
+    - path: data/features/features_xlsr_layer10_pca.npz
       hash: md5
-      md5: 1ea190b2895698fe776068e461b5a072
-      size: 4767664
+      md5: 3bbbf7c4945a5d3b2fc5f80a7f555aa0
+      size: 9534816
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: f9c0603b8e744a290e28521eef02d161
-      size: 9534816
-    - path: data/features/features_xlsr_pca.npz
-      hash: md5
-      md5: 06de09dc1b42ebee10bd47d8fe69627c
+      md5: d8e9d6267b4d5a78cbefb71690c49085
       size: 9534816
