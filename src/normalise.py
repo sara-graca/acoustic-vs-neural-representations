@@ -17,6 +17,7 @@ ACOUSTIC_OUT = os.path.join("data", "features", "features_acoustic_norm.csv")
 NEURAL_FILES = [
     ("data/features/features_whisper_layer20.npz", "data/features/features_whisper_layer20_pca.npz"),
     ("data/features/features_whisper_layer4.npz",  "data/features/features_whisper_layer4_pca.npz"),
+    ("data/features/features_xlsr_layer20.npz",    "data/features/features_xlsr_layer20_pca.npz"),
     ("data/features/features_xlsr_layer10.npz",    "data/features/features_xlsr_layer10_pca.npz"),
     ("data/features/features_xlsr_layer3.npz",     "data/features/features_xlsr_layer3_pca.npz"),
 ]

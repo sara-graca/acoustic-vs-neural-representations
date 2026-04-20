@@ -58,14 +58,18 @@ stages:
       hash: md5
       md5: 83e412a130c2fe022162b7d5a892ad8c
       size: 99519208
+    - path: data/features/features_xlsr_layer20.npz
+      hash: md5
+      md5: 220b716733ce082d19072272de253bd4
+      size: 99519208
     - path: data/features/features_xlsr_layer3.npz
       hash: md5
       md5: 908ea5960712efe82468be5dbb36b15e
       size: 99519208
     - path: src/normalise.py
       hash: md5
-      md5: 7b29ca43ad985e2449ee2d14917f1294
-      size: 2111
+      md5: f91432a26c57745ce990be182fbea94c
+      size: 2211
     params:
       params.yaml:
         normalise:
@@ -78,17 +82,21 @@ stages:
       size: 6030893
     - path: data/features/features_whisper_layer20_pca.npz
       hash: md5
-      md5: 10525ae8fb5cd7e1d043a88b391b8820
+      md5: 36e72c744cad464576705b419d95ef86
       size: 4767664
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: dcef5d0ecc84f9b8a3048de1a814cde2
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
       size: 4767664
     - path: data/features/features_xlsr_layer10_pca.npz
       hash: md5
-      md5: 3bbbf7c4945a5d3b2fc5f80a7f555aa0
+      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      size: 9534816
+    - path: data/features/features_xlsr_layer20_pca.npz
+      hash: md5
+      md5: 0a551bab3803385d7c66d77c7b6e6f1a
       size: 9534816
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: d8e9d6267b4d5a78cbefb71690c49085
+      md5: 1065305448c3ae52274c87a65e507655
       size: 9534816
