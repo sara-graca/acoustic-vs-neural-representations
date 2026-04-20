@@ -1,0 +1,5 @@
+outs:
+- md5: a5afa0ca414d85c71b179d751a3c2d06
+  size: 99400424
+  hash: md5
+  path: features_whisper_layer4.npz
