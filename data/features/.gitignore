@@ -6,3 +6,5 @@
 /features_xlsr_pca.npz
 /features_whisper_layer4.npz
 /features_xlsr_layer3.npz
+/features_whisper_layer4_pca.npz
+/features_xlsr_layer3_pca.npz

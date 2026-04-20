@@ -10,20 +10,20 @@ stages:
       nfiles: 5930
     - path: src/parse_corpus.py
       hash: md5
-      md5: b9c2833d655d19d902670dc06b17baf3
-      size: 3822
+      md5: 76948ba8b4364c62d9a8e5bdadfcf923
+      size: 3941
     outs:
     - path: data/parsed/phonemes.csv
       hash: md5
-      md5: 117aff9d68da88f7d1813f5fa66a3ddd
-      size: 3684250
+      md5: 955b378f6acb6a10eeed6252fd148edb
+      size: 3681667
   extract_acoustics:
     cmd: python src/extract_acoustics.py
     deps:
     - path: data/parsed/phonemes.csv
       hash: md5
-      md5: 117aff9d68da88f7d1813f5fa66a3ddd
-      size: 3684250
+      md5: 955b378f6acb6a10eeed6252fd148edb
+      size: 3681667
     - path: src/extract_acoustics.py
       hash: md5
       md5: 48f4598308dd5dd8d44caaeae8dbe0ad
@@ -37,27 +37,35 @@ stages:
     outs:
     - path: data/features/features_acoustic.csv
       hash: md5
-      md5: 0e6592b00a62546e01a913c852d48eae
-      size: 5179416
+      md5: ef465e59f67c672f6de859ad1c0f6327
+      size: 5176833
   normalise:
     cmd: python src/normalise.py
     deps:
     - path: data/features/features_acoustic.csv
       hash: md5
-      md5: 0e6592b00a62546e01a913c852d48eae
-      size: 5179416
+      md5: ef465e59f67c672f6de859ad1c0f6327
+      size: 5176833
     - path: data/features/features_whisper.npz
       hash: md5
       md5: 96721eec2b4465cb32adedad7630a0df
+      size: 99400424
+    - path: data/features/features_whisper_layer4.npz
+      hash: md5
+      md5: a5afa0ca414d85c71b179d751a3c2d06
       size: 99400424
     - path: data/features/features_xlsr.npz
       hash: md5
       md5: 83e412a130c2fe022162b7d5a892ad8c
       size: 99519208
+    - path: data/features/features_xlsr_layer3.npz
+      hash: md5
+      md5: 908ea5960712efe82468be5dbb36b15e
+      size: 99519208
     - path: src/normalise.py
       hash: md5
-      md5: c9890c5d6622dc8874c87d15eb49575d
-      size: 2076
+      md5: ae503d677a5663376e444fca6a84ca17
+      size: 2324
     params:
       params.yaml:
         normalise:
@@ -66,13 +74,21 @@ stages:
     outs:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 8060b3a25cb2866ade392b32ca4a1265
-      size: 6033476
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 9d8cc144d335ed8b824b91d8bfdb2dcd
+      size: 4767664
     - path: data/features/features_whisper_pca.npz
       hash: md5
-      md5: a63bcf869b4f030e27e4da0ffebc669a
+      md5: 1ea190b2895698fe776068e461b5a072
       size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: f9c0603b8e744a290e28521eef02d161
+      size: 9534816
     - path: data/features/features_xlsr_pca.npz
       hash: md5
-      md5: 86ada39a8ba345bab273c2c41150b245
+      md5: 06de09dc1b42ebee10bd47d8fe69627c
       size: 9534816

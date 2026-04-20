@@ -75,6 +75,8 @@ for speaker_folder in sorted(os.listdir(CORPUS_DIR)):
 
         for interval in phones_tier.intervals:
             label = interval.text.strip()
+            # clean malformed labels like "ding... d" → "d"
+            label = re.sub(r"^ding+\.+\s*", "", label)
             if label == "":
                 continue
 
