@@ -100,3 +100,59 @@ stages:
       hash: md5
       md5: 1065305448c3ae52274c87a65e507655
       size: 9534816
+  descriptive_acoustic:
+    cmd: python src/descriptive_acoustic.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: src/descriptive_acoustic.py
+      hash: md5
+      md5: 909a884256bd3032ea969e7bf685835c
+      size: 5594
+    outs:
+    - path: results/figures/boxplot_F1_norm.pdf
+      hash: md5
+      md5: d4af1c0da69dd5a85c5f3564364aae32
+      size: 28598
+    - path: results/figures/boxplot_F1_norm.png
+      hash: md5
+      md5: d8a2f3120eff76df86757548bf860142
+      size: 67560
+    - path: results/figures/boxplot_F2_norm.pdf
+      hash: md5
+      md5: 3475f67d3d4f81fdfa53a3196f379a35
+      size: 28043
+    - path: results/figures/boxplot_F2_norm.png
+      hash: md5
+      md5: be0ea7ca67256198505a10c22d0d7517
+      size: 75283
+    - path: results/figures/violin_F1_norm.pdf
+      hash: md5
+      md5: 4d52699ce5bd75696c34df961a8750c6
+      size: 32852
+    - path: results/figures/violin_F1_norm.png
+      hash: md5
+      md5: f2e37b0c51da4ccdd21665eab94c58f0
+      size: 75405
+    - path: results/figures/violin_F2_norm.pdf
+      hash: md5
+      md5: 4cb2fd3b52f9fb9dc075b569d5eb468b
+      size: 33112
+    - path: results/figures/violin_F2_norm.png
+      hash: md5
+      md5: 7d8ff4c301ea25dded16444a3be536f4
+      size: 87251
+    - path: results/figures/vowel_chart.pdf
+      hash: md5
+      md5: 38f62eed45055036dd96c5d82a2e642d
+      size: 40198
+    - path: results/figures/vowel_chart.png
+      hash: md5
+      md5: 052a99df115869549277da2d90aec1de
+      size: 421227
+    - path: results/tables/descriptive_acoustic.csv
+      hash: md5
+      md5: 4d7280442f2283e433f7dcbaa4fbb049
+      size: 4701

@@ -41,3 +41,21 @@ stages:
         - data/features/features_xlsr_layer20_pca.npz
         - data/features/features_xlsr_layer10_pca.npz
         - data/features/features_xlsr_layer3_pca.npz
+  
+  descriptive_acoustic:
+    cmd: python src/descriptive_acoustic.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - src/descriptive_acoustic.py
+    outs:
+      - results/figures/vowel_chart.pdf
+      - results/figures/vowel_chart.png
+      - results/figures/boxplot_F1_norm.pdf
+      - results/figures/boxplot_F1_norm.png
+      - results/figures/boxplot_F2_norm.pdf
+      - results/figures/boxplot_F2_norm.png
+      - results/figures/violin_F1_norm.pdf
+      - results/figures/violin_F1_norm.png
+      - results/figures/violin_F2_norm.pdf
+      - results/figures/violin_F2_norm.png
+      - results/tables/descriptive_acoustic.csv
