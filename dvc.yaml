@@ -124,3 +124,11 @@ stages:
       - src/tests_acoustic_l1l2.py
     outs:
       - results/tables/l1_l2_acoustic_tests.csv
+
+  tests_acoustic_gender:
+    cmd: python src/tests_acoustic_gender.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - src/tests_acoustic_gender.py
+    outs:
+      - results/tables/gender_acoustic_tests.csv

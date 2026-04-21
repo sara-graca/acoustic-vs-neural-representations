@@ -368,3 +368,19 @@ stages:
       hash: md5
       md5: 28bcde12aeec2c0585607f9ad906bd7f
       size: 1509
+  tests_acoustic_gender:
+    cmd: python src/tests_acoustic_gender.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: src/tests_acoustic_gender.py
+      hash: md5
+      md5: bf17fb23fda3027923a42ac707598ef0
+      size: 2006
+    outs:
+    - path: results/tables/gender_acoustic_tests.csv
+      hash: md5
+      md5: 5a3db7795298c5e333179e46fcd77af7
+      size: 1126
