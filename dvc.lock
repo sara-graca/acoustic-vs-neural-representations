@@ -156,3 +156,163 @@ stages:
       hash: md5
       md5: 4d7280442f2283e433f7dcbaa4fbb049
       size: 4701
+  descriptive_neural:
+    cmd: python src/descriptive_neural.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer20_pca.npz
+      hash: md5
+      md5: 36e72c744cad464576705b419d95ef86
+      size: 4767664
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer10_pca.npz
+      hash: md5
+      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      size: 9534816
+    - path: data/features/features_xlsr_layer20_pca.npz
+      hash: md5
+      md5: 0a551bab3803385d7c66d77c7b6e6f1a
+      size: 9534816
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/descriptive_neural.py
+      hash: md5
+      md5: 96f16efd0dfe1b8a29b52bf07f1d3b87
+      size: 4512
+    outs:
+    - path: results/figures/neural_whisper_layer20_pca_gender.png
+      hash: md5
+      md5: 1ed3c95371a85e2931c4c0fc090c6c65
+      size: 134055
+    - path: results/figures/neural_whisper_layer20_pca_l1_status.png
+      hash: md5
+      md5: 07e86258c72a5c3a66f2a6a10384f138
+      size: 130443
+    - path: results/figures/neural_whisper_layer20_pca_phoneme.png
+      hash: md5
+      md5: 92883f8e2506a0fe162092df831f1eda
+      size: 148867
+    - path: results/figures/neural_whisper_layer20_umap_gender.png
+      hash: md5
+      md5: f109841cd449ce74ace4a2d1b9783c49
+      size: 252072
+    - path: results/figures/neural_whisper_layer20_umap_l1_status.png
+      hash: md5
+      md5: c0c29acd00d2d3c313fe5171f80551a0
+      size: 246468
+    - path: results/figures/neural_whisper_layer20_umap_phoneme.png
+      hash: md5
+      md5: 5bd149030192c8eb44616df383b536fe
+      size: 284353
+    - path: results/figures/neural_whisper_layer4_pca_gender.png
+      hash: md5
+      md5: 102a623bed63690e6732f0fc28423499
+      size: 640639
+    - path: results/figures/neural_whisper_layer4_pca_l1_status.png
+      hash: md5
+      md5: f4df2856a10e692caf97d1651c837a93
+      size: 626636
+    - path: results/figures/neural_whisper_layer4_pca_phoneme.png
+      hash: md5
+      md5: acd04fac5a5f0b01093bfcdc2caed433
+      size: 684102
+    - path: results/figures/neural_whisper_layer4_umap_gender.png
+      hash: md5
+      md5: 8ca92d2c9de8bb2401d8e5a6fc0a8e76
+      size: 475603
+    - path: results/figures/neural_whisper_layer4_umap_l1_status.png
+      hash: md5
+      md5: 8798e6a92db8bc2c53cf3406502478b1
+      size: 467428
+    - path: results/figures/neural_whisper_layer4_umap_phoneme.png
+      hash: md5
+      md5: 43c11f40b9092a92dd9df418d116fa36
+      size: 501587
+    - path: results/figures/neural_xlsr_layer10_pca_gender.png
+      hash: md5
+      md5: a3cd39811ad6c1719f960ae766b7604f
+      size: 792727
+    - path: results/figures/neural_xlsr_layer10_pca_l1_status.png
+      hash: md5
+      md5: 0243281eb035793c27e08365cdb094a9
+      size: 776863
+    - path: results/figures/neural_xlsr_layer10_pca_phoneme.png
+      hash: md5
+      md5: 8f6a7a3ed8a5445ce4578a660a4a9b26
+      size: 835670
+    - path: results/figures/neural_xlsr_layer10_umap_gender.png
+      hash: md5
+      md5: 01537c285e1b999bd4c64e4777b93679
+      size: 386603
+    - path: results/figures/neural_xlsr_layer10_umap_l1_status.png
+      hash: md5
+      md5: ba3438db2b704e3046897081a568d4b3
+      size: 385830
+    - path: results/figures/neural_xlsr_layer10_umap_phoneme.png
+      hash: md5
+      md5: 3a2564b00a8516bc973800208f4b774f
+      size: 390403
+    - path: results/figures/neural_xlsr_layer20_pca_gender.png
+      hash: md5
+      md5: 0f0a88abe2d8c68fa52f7ee31e7d1502
+      size: 864819
+    - path: results/figures/neural_xlsr_layer20_pca_l1_status.png
+      hash: md5
+      md5: 2831080a3676d8111f22180b5ca15152
+      size: 855752
+    - path: results/figures/neural_xlsr_layer20_pca_phoneme.png
+      hash: md5
+      md5: a9baacce10d26938fedb1cd773c391df
+      size: 892612
+    - path: results/figures/neural_xlsr_layer20_umap_gender.png
+      hash: md5
+      md5: 54ce668e5d99b65fc0662e1c772f6a1a
+      size: 273866
+    - path: results/figures/neural_xlsr_layer20_umap_l1_status.png
+      hash: md5
+      md5: 95488091bc1b55bab749e2e5f667e85a
+      size: 288616
+    - path: results/figures/neural_xlsr_layer20_umap_phoneme.png
+      hash: md5
+      md5: efdb27a466d7f6f9f7cfd1870ffeb7ae
+      size: 300601
+    - path: results/figures/neural_xlsr_layer3_pca_gender.png
+      hash: md5
+      md5: 04302ced9dcba8c726ab814499c6b363
+      size: 804379
+    - path: results/figures/neural_xlsr_layer3_pca_l1_status.png
+      hash: md5
+      md5: 2e3158de29f48f16cb915b0cb2d463b9
+      size: 793634
+    - path: results/figures/neural_xlsr_layer3_pca_phoneme.png
+      hash: md5
+      md5: e95e47940c2d582c007333ce68b06d81
+      size: 835968
+    - path: results/figures/neural_xlsr_layer3_umap_gender.png
+      hash: md5
+      md5: f4f9a0d9c6ab2b34118bb93bed707e8b
+      size: 203745
+    - path: results/figures/neural_xlsr_layer3_umap_l1_status.png
+      hash: md5
+      md5: 6fb61d5646064c4c34f4f64d30cd08a3
+      size: 213076
+    - path: results/figures/neural_xlsr_layer3_umap_phoneme.png
+      hash: md5
+      md5: 6721b02d84e68209be62219272b79d5e
+      size: 230080
+    - path: results/tables/neural_cosine_similarity.csv
+      hash: md5
+      md5: 055544aa56c0b4340fc5409051b52f5a
+      size: 219
+    - path: results/tables/neural_variance_ratio.csv
+      hash: md5
+      md5: 9a735c54db8a1f627154e5f6bf61f07e
+      size: 706

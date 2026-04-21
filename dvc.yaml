@@ -59,3 +59,47 @@ stages:
       - results/figures/violin_F2_norm.pdf
       - results/figures/violin_F2_norm.png
       - results/tables/descriptive_acoustic.csv
+
+  descriptive_neural:
+    cmd: python src/descriptive_neural.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer20_pca.npz
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer20_pca.npz
+      - data/features/features_xlsr_layer10_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+      - src/descriptive_neural.py
+    outs:
+      - results/figures/neural_whisper_layer20_pca_phoneme.png
+      - results/figures/neural_whisper_layer20_pca_l1_status.png
+      - results/figures/neural_whisper_layer20_pca_gender.png
+      - results/figures/neural_whisper_layer20_umap_phoneme.png
+      - results/figures/neural_whisper_layer20_umap_l1_status.png
+      - results/figures/neural_whisper_layer20_umap_gender.png
+      - results/figures/neural_whisper_layer4_pca_phoneme.png
+      - results/figures/neural_whisper_layer4_pca_l1_status.png
+      - results/figures/neural_whisper_layer4_pca_gender.png
+      - results/figures/neural_whisper_layer4_umap_phoneme.png
+      - results/figures/neural_whisper_layer4_umap_l1_status.png
+      - results/figures/neural_whisper_layer4_umap_gender.png
+      - results/figures/neural_xlsr_layer20_pca_phoneme.png
+      - results/figures/neural_xlsr_layer20_pca_l1_status.png
+      - results/figures/neural_xlsr_layer20_pca_gender.png
+      - results/figures/neural_xlsr_layer20_umap_phoneme.png
+      - results/figures/neural_xlsr_layer20_umap_l1_status.png
+      - results/figures/neural_xlsr_layer20_umap_gender.png
+      - results/figures/neural_xlsr_layer10_pca_phoneme.png
+      - results/figures/neural_xlsr_layer10_pca_l1_status.png
+      - results/figures/neural_xlsr_layer10_pca_gender.png
+      - results/figures/neural_xlsr_layer10_umap_phoneme.png
+      - results/figures/neural_xlsr_layer10_umap_l1_status.png
+      - results/figures/neural_xlsr_layer10_umap_gender.png
+      - results/figures/neural_xlsr_layer3_pca_phoneme.png
+      - results/figures/neural_xlsr_layer3_pca_l1_status.png
+      - results/figures/neural_xlsr_layer3_pca_gender.png
+      - results/figures/neural_xlsr_layer3_umap_phoneme.png
+      - results/figures/neural_xlsr_layer3_umap_l1_status.png
+      - results/figures/neural_xlsr_layer3_umap_gender.png
+      - results/tables/neural_variance_ratio.csv
+      - results/tables/neural_cosine_similarity.csv
