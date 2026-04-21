@@ -16,6 +16,8 @@ transformers = "*"
 tqdm = "*"
 chardet = ">=5.2.0,<6"
 ipykernel = "*"
+matplotlib = ">=3.10.8,<4"
+seaborn = ">=0.13.2,<0.14"
 
 [pypi-dependencies]
 tgt = "*"
