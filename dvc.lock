@@ -352,3 +352,19 @@ stages:
       hash: md5
       md5: ea38c46dcde6c911dc2f7b4f6c93c330
       size: 642
+  tests_acoustic_l1l2:
+    cmd: python src/tests_acoustic_l1l2.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: src/tests_acoustic_l1l2.py
+      hash: md5
+      md5: a0b244d9fd19311bfd3d2b122736739b
+      size: 2355
+    outs:
+    - path: results/tables/l1_l2_acoustic_tests.csv
+      hash: md5
+      md5: 28bcde12aeec2c0585607f9ad906bd7f
+      size: 1509

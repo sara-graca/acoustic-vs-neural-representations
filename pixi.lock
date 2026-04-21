@@ -284,11 +284,14 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/28/52/182836104b33b444e400b14f797212f720cbc9ed6ba34c800639d154e821/markupsafe-3.0.3-cp314-cp314-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/30/04/b57109ac39c90054ca8239daa61f619042b73406309c33df06d3b73a48a7/pandas_flavor-0.8.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/58/6d/23037a7081a15c2ddfcd788194996bafe5c4cee8532d7e23d5e5beebcfbe/pingouin-0.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/38/d4/bbc8153bde9812b33714c210b41ddb50d5af56a6d155f23ee44a01724146/praat_parselmouth-0.4.7-cp314-cp314-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/14/e9/6b761de83277f2f02ded7e7ea6f07828ec78e4b229b80e4ca55dd205b9dc/soundfile-0.13.1-py2.py3-none-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e1/b2/98c733f6ef24e1f29b23f0f536e5e2fbcadc56493c9a36be7ff7a8181638/tgt-1.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/56/97/078a007208f8056d88ae43198833469e61a0a355abc0b070edd2c085eb9a/torch-2.10.0-cp314-cp314-win_amd64.whl
+      - pypi: https://files.pythonhosted.org/packages/dc/83/6d810a8a9ebc9c307989b418840c20e46907c74d707beb67ab566773e6fc/xarray-2026.4.0-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/win-64/_openmp_mutex-4.5-20_gnu.conda
   build_number: 20
@@ -2723,6 +2726,14 @@ packages:
   - pkg:pypi/pandas?source=compressed-mapping
   size: 14038278
   timestamp: 1774916628571
+- pypi: https://files.pythonhosted.org/packages/30/04/b57109ac39c90054ca8239daa61f619042b73406309c33df06d3b73a48a7/pandas_flavor-0.8.1-py3-none-any.whl
+  name: pandas-flavor
+  version: 0.8.1
+  sha256: 6a74c48a7014e27117a164b687c23ca9f7da46c5b198a516ab4ebaa22435292b
+  requires_dist:
+  - pandas>=0.23
+  - xarray
+  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/win-64/pango-1.56.4-h13911b6_1.conda
   sha256: 3d4e6e541e633f6fd22fc2c1d79ad5ec39503dea3ba04fc3e01d5be904ec7cea
   md5: 1f1cf3772ba7d4eef989e4679ddf97f7
@@ -2831,6 +2842,22 @@ packages:
   - pkg:pypi/pillow?source=hash-mapping
   size: 983791
   timestamp: 1775060119774
+- pypi: https://files.pythonhosted.org/packages/58/6d/23037a7081a15c2ddfcd788194996bafe5c4cee8532d7e23d5e5beebcfbe/pingouin-0.6.1-py3-none-any.whl
+  name: pingouin
+  version: 0.6.1
+  sha256: 514f2897d7ee354723268551147bbc95849ccec83d6f1dddde1395779c6a7b15
+  requires_dist:
+  - matplotlib
+  - numpy>=1.22.4
+  - pandas>=2.1.1
+  - pandas-flavor
+  - scikit-learn>=1.2.2
+  - scipy>=1.10.0
+  - seaborn
+  - statsmodels>=0.14.1
+  - tabulate
+  - mpmath ; extra == 'extras'
+  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/win-64/pixman-0.46.4-h5112557_1.conda
   sha256: 246fce4706b3f8b247a7d6142ba8d732c95263d3c96e212b9d63d6a4ab4aff35
   md5: 08c8fa3b419df480d985e304f7884d35
@@ -4054,6 +4081,54 @@ packages:
   - pkg:pypi/win-inet-pton?source=hash-mapping
   size: 9555
   timestamp: 1733130678956
+- pypi: https://files.pythonhosted.org/packages/dc/83/6d810a8a9ebc9c307989b418840c20e46907c74d707beb67ab566773e6fc/xarray-2026.4.0-py3-none-any.whl
+  name: xarray
+  version: 2026.4.0
+  sha256: d43751d9fb4a90f9249c30431684f00c41bc874f1edccd862631a40cbc0edf08
+  requires_dist:
+  - numpy>=1.26
+  - packaging>=24.2
+  - pandas>=2.2
+  - scipy>=1.15 ; extra == 'accel'
+  - bottleneck ; extra == 'accel'
+  - numbagg>=0.9 ; extra == 'accel'
+  - numba>=0.62 ; extra == 'accel'
+  - flox>=0.10 ; extra == 'accel'
+  - opt-einsum ; extra == 'accel'
+  - xarray[accel,etc,io,parallel,viz] ; extra == 'complete'
+  - netcdf4>=1.6.0 ; extra == 'io'
+  - h5netcdf[h5py]>=1.5.0 ; extra == 'io'
+  - pydap ; extra == 'io'
+  - scipy>=1.15 ; extra == 'io'
+  - zarr>=3.0 ; extra == 'io'
+  - fsspec ; extra == 'io'
+  - cftime ; extra == 'io'
+  - pooch ; extra == 'io'
+  - sparse>=0.15 ; extra == 'etc'
+  - dask[complete] ; extra == 'parallel'
+  - cartopy>=0.24 ; extra == 'viz'
+  - matplotlib>=3.10 ; extra == 'viz'
+  - nc-time-axis ; extra == 'viz'
+  - seaborn ; extra == 'viz'
+  - pandas-stubs ; extra == 'types'
+  - scipy-stubs ; extra == 'types'
+  - types-colorama ; extra == 'types'
+  - types-decorator ; extra == 'types'
+  - types-defusedxml ; extra == 'types'
+  - types-docutils ; extra == 'types'
+  - types-networkx ; extra == 'types'
+  - types-openpyxl ; extra == 'types'
+  - types-pexpect ; extra == 'types'
+  - types-psutil ; extra == 'types'
+  - types-pycurl ; extra == 'types'
+  - types-pygments ; extra == 'types'
+  - types-python-dateutil ; extra == 'types'
+  - types-pytz ; extra == 'types'
+  - types-pyyaml ; extra == 'types'
+  - types-requests ; extra == 'types'
+  - types-setuptools ; extra == 'types'
+  - types-xlrd ; extra == 'types'
+  requires_python: '>=3.11'
 - conda: https://conda.anaconda.org/conda-forge/win-64/xorg-libice-1.1.2-h0e40799_0.conda
   sha256: bf1d34142b1bf9b5a4eed96bcc77bc4364c0e191405fd30d2f9b48a04d783fd3
   md5: 105cb93a47df9c548e88048dc9cbdbc9
