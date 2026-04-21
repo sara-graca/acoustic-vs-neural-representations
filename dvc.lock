@@ -384,3 +384,27 @@ stages:
       hash: md5
       md5: 5a3db7795298c5e333179e46fcd77af7
       size: 1126
+  tests_neural_l1l2:
+    cmd: python src/tests_neural_l1l2.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/tests_neural_l1l2.py
+      hash: md5
+      md5: 728cd68c6fa75fd24bfd3fe97f29aa24
+      size: 2475
+    outs:
+    - path: results/tables/l1_l2_neural_tests.csv
+      hash: md5
+      md5: 8fa7c0cc7fb69394b8585c8b80b7cb3c
+      size: 916
