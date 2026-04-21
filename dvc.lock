@@ -316,3 +316,39 @@ stages:
       hash: md5
       md5: 9a735c54db8a1f627154e5f6bf61f07e
       size: 706
+  descriptive_crossrep:
+    cmd: python src/descriptive_crossrep.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer20_pca.npz
+      hash: md5
+      md5: 36e72c744cad464576705b419d95ef86
+      size: 4767664
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer10_pca.npz
+      hash: md5
+      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      size: 9534816
+    - path: data/features/features_xlsr_layer20_pca.npz
+      hash: md5
+      md5: 0a551bab3803385d7c66d77c7b6e6f1a
+      size: 9534816
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/descriptive_crossrep.py
+      hash: md5
+      md5: b7478b76d6c80767fc42d0d00f2706e4
+      size: 2704
+    outs:
+    - path: results/tables/mantel_tests.csv
+      hash: md5
+      md5: ea38c46dcde6c911dc2f7b4f6c93c330
+      size: 642

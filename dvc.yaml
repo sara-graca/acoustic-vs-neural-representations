@@ -103,3 +103,16 @@ stages:
       - results/figures/neural_xlsr_layer3_umap_gender.png
       - results/tables/neural_variance_ratio.csv
       - results/tables/neural_cosine_similarity.csv
+
+  descriptive_crossrep:
+    cmd: python src/descriptive_crossrep.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer20_pca.npz
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer20_pca.npz
+      - data/features/features_xlsr_layer10_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+      - src/descriptive_crossrep.py
+    outs:
+      - results/tables/mantel_tests.csv
