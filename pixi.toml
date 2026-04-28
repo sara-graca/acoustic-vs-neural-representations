@@ -20,6 +20,7 @@ matplotlib = ">=3.10.8,<4"
 seaborn = ">=0.13.2,<0.14"
 umap-learn = ">=0.5.12,<0.6"
 scipy = ">=1.17.1,<2"
+statsmodels = ">=0.14.6,<0.15"
 
 [pypi-dependencies]
 tgt = "*"

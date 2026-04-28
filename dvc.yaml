@@ -157,3 +157,20 @@ stages:
       - results/tables/distance_mantel.csv
       - results/tables/distance_bootstrap_ci.csv
       - results/figures/distance_matrices.png
+  
+  nearest_centroid_classifier:
+    cmd: python src/nearest_centroid_classifier.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+      - src/nearest_centroid_classifier.py
+    params:
+      - params.yaml:
+        - tests_inter_distances.vowels
+    outs:
+      - results/tables/classifier_summary.csv
+      - results/tables/classifier_mcnemar.csv
+      - results/figures/confusion_acoustic.png
+      - results/figures/confusion_whisper_layer4.png
+      - results/figures/confusion_xlsr_layer3.png

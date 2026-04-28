@@ -472,3 +472,56 @@ stages:
       hash: md5
       md5: ea7eba2617a51923055b5cea002404e3
       size: 226
+  nearest_centroid_classifier:
+    cmd: python src/nearest_centroid_classifier.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/nearest_centroid_classifier.py
+      hash: md5
+      md5: 0be215ea855a185d575fb85185269517
+      size: 8554
+    params:
+      params.yaml:
+        tests_inter_distances.vowels:
+        - a
+        - e
+        - i
+        - o
+        - u
+        - y
+        - ø
+        - ɛ
+        - ɑ
+        - ə
+    outs:
+    - path: results/figures/confusion_acoustic.png
+      hash: md5
+      md5: 4a8b522e9e17a6d338ca0910933646c8
+      size: 105693
+    - path: results/figures/confusion_whisper_layer4.png
+      hash: md5
+      md5: ebf9c902189dbe6b6c99399de5b31f47
+      size: 119618
+    - path: results/figures/confusion_xlsr_layer3.png
+      hash: md5
+      md5: f822abe75d7d7cd2d6672de0ad162027
+      size: 97556
+    - path: results/tables/classifier_mcnemar.csv
+      hash: md5
+      md5: 73461665af611a70c121ea05476d40cb
+      size: 520
+    - path: results/tables/classifier_summary.csv
+      hash: md5
+      md5: 656b5361ba92caeebc527f0bc5b5e1c0
+      size: 377
