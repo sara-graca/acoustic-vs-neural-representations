@@ -142,3 +142,18 @@ stages:
       - src/tests_neural_l1l2.py
     outs:
       - results/tables/l1_l2_neural_tests.csv
+
+  tests_inter_distances:
+    cmd: python src/tests_inter_distances.py
+    deps:
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+      - src/tests_inter_distances.py
+    params:
+      - params.yaml:
+        - tests_inter_distances
+    outs:
+      - results/tables/distance_mantel.csv
+      - results/tables/distance_bootstrap_ci.csv
+      - results/figures/distance_matrices.png

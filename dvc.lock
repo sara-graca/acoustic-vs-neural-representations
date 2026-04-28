@@ -408,3 +408,67 @@ stages:
       hash: md5
       md5: 8fa7c0cc7fb69394b8585c8b80b7cb3c
       size: 916
+  tests_inter_distances:
+    cmd: python src/tests_inter_distances.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/tests_inter_distances.py
+      hash: md5
+      md5: 48d0604fd213d3450c4786e0712dab2c
+      size: 11196
+    params:
+      params.yaml:
+        tests_inter_distances:
+          n_boot: 2000
+          vowels:
+          - a
+          - e
+          - i
+          - o
+          - u
+          - y
+          - ø
+          - ɛ
+          - ɑ
+          - ə
+          pairs:
+          - - i
+            - u
+          - - e
+            - o
+          - - a
+            - u
+          - - e
+            - ɛ
+          - - o
+            - u
+          - - a
+            - ɑ
+          - - i
+            - y
+          - - e
+            - ø
+    outs:
+    - path: results/figures/distance_matrices.png
+      hash: md5
+      md5: 7b131d73096346a1333dd375776139b3
+      size: 275668
+    - path: results/tables/distance_bootstrap_ci.csv
+      hash: md5
+      md5: 631906e74b1d272c8603d6afb9318645
+      size: 1713
+    - path: results/tables/distance_mantel.csv
+      hash: md5
+      md5: ea7eba2617a51923055b5cea002404e3
+      size: 226

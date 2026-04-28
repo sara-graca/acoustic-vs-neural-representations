@@ -14,3 +14,16 @@ xlsr:
 normalise:
   pca_dims_viz: 2
   pca_dims_clustering: 50
+
+tests_inter_distances:
+  n_boot: 2000
+  vowels: ["a", "e", "i", "o", "u", "y", "ø", "ɛ", "ɑ", "ə"]
+  pairs:
+    - ["i", "u"]
+    - ["e", "o"]
+    - ["a", "u"]
+    - ["e", "ɛ"]
+    - ["o", "u"]
+    - ["a", "ɑ"]
+    - ["i", "y"]
+    - ["e", "ø"]
