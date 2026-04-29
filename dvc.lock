@@ -489,8 +489,8 @@ stages:
       size: 9534816
     - path: src/nearest_centroid_classifier.py
       hash: md5
-      md5: 0be215ea855a185d575fb85185269517
-      size: 8554
+      md5: 7f15c9aa04f435a0e37506c91efd0a0b
+      size: 8356
     params:
       params.yaml:
         tests_inter_distances.vowels:
@@ -525,3 +525,61 @@ stages:
       hash: md5
       md5: 656b5361ba92caeebc527f0bc5b5e1c0
       size: 377
+  lme_models:
+    cmd: python src/lme_models.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/lme_models.py
+      hash: md5
+      md5: b259f2959032ceafcef1b0147bfd90ed
+      size: 10899
+    params:
+      params.yaml:
+        lme_models.n_neural_pcs: 5
+        tests_inter_distances.vowels:
+        - a
+        - e
+        - i
+        - o
+        - u
+        - y
+        - ø
+        - ɛ
+        - ɑ
+        - ə
+    outs:
+    - path: results/figures/lme_l2_forest.png
+      hash: md5
+      md5: 6251604733446d2d44e27f9efbbd5c0c
+      size: 61865
+    - path: results/tables/lme_best_model.csv
+      hash: md5
+      md5: 5864552adc099133b873b3c0fc34a409
+      size: 417
+    - path: results/tables/lme_fixed_effects.csv
+      hash: md5
+      md5: 77948b5836c1f3b845c4a5dcaa576a49
+      size: 4546
+    - path: results/tables/lme_icc.csv
+      hash: md5
+      md5: 1b8cb858e866f2d0fa3c088398bff16c
+      size: 282
+    - path: results/tables/lme_lrt.csv
+      hash: md5
+      md5: 05bab231434f29579b3e59f2bd8ecca8
+      size: 1628
+    - path: results/tables/lme_summary.csv
+      hash: md5
+      md5: 6d7550fc154f2eadd39ed1280ff41fbd
+      size: 2690

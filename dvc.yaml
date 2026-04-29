@@ -174,3 +174,22 @@ stages:
       - results/figures/confusion_acoustic.png
       - results/figures/confusion_whisper_layer4.png
       - results/figures/confusion_xlsr_layer3.png
+
+  lme_models:
+    cmd: python src/lme_models.py
+    deps:
+      - src/lme_models.py
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+    params:
+      - params.yaml:
+          - tests_inter_distances.vowels
+          - lme_models.n_neural_pcs
+    outs:
+      - results/tables/lme_summary.csv
+      - results/tables/lme_lrt.csv
+      - results/tables/lme_fixed_effects.csv
+      - results/tables/lme_icc.csv
+      - results/tables/lme_best_model.csv
+      - results/figures/lme_l2_forest.png

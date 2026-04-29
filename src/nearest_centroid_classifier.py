@@ -222,9 +222,6 @@ for rep_name, res in all_results.items():
     acc_l1 = accuracy_score(res_l1["true"], res_l1["pred"])
     acc_l2 = accuracy_score(res_l2["true"], res_l2["pred"])
 
-    # McNemar on matched tokens that appear in both subgroups is not meaningful
-    # (L1 and L2 are different speakers, not matched pairs).
-    # Instead report accuracy difference with a note.
     mcnemar_rows.append({
         "comparison":  f"{rep_name} — L1 acc vs L2 acc",
         "n_tokens":    f"L1={len(res_l1)}, L2={len(res_l2)}",

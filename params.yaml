@@ -27,3 +27,6 @@ tests_inter_distances:
     - ["a", "ɑ"]
     - ["i", "y"]
     - ["e", "ø"]
+
+lme_models:
+  n_neural_pcs: 5
