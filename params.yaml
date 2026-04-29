@@ -30,3 +30,7 @@ tests_inter_distances:
 
 lme_models:
   n_neural_pcs: 5
+
+ci_rope:
+  n_boot: 2000
+  rope_hz: 20.0

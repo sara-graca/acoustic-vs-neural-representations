@@ -583,3 +583,66 @@ stages:
       hash: md5
       md5: 6d7550fc154f2eadd39ed1280ff41fbd
       size: 2690
+  ci_rope:
+    cmd: python src/ci_rope.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: 9b83c2842d94385c23c6b4f99debbd7b
+      size: 6030893
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 1065305448c3ae52274c87a65e507655
+      size: 9534816
+    - path: src/ci_rope.py
+      hash: md5
+      md5: cdb23ed1073202680859470d518b9845
+      size: 13321
+    params:
+      params.yaml:
+        ci_rope.n_boot: 2000
+        ci_rope.rope_hz: 20.0
+        tests_inter_distances.vowels:
+        - a
+        - e
+        - i
+        - o
+        - u
+        - y
+        - ø
+        - ɛ
+        - ɑ
+        - ə
+    outs:
+    - path: results/figures/rope_acoustic_forest.png
+      hash: md5
+      md5: b8f5c093286c04d203959b366028b829
+      size: 55433
+    - path: results/figures/rope_neural_forest.png
+      hash: md5
+      md5: 0501ac41fb51a392d3275f9da8635bd5
+      size: 65624
+    - path: results/tables/rope_acoustic_ci.csv
+      hash: md5
+      md5: 1b9cd035296c294ce80c4228b8eac1f7
+      size: 849
+    - path: results/tables/rope_classification.csv
+      hash: md5
+      md5: f1382e8423c72f7727fe071b5a72efd9
+      size: 3044
+    - path: results/tables/rope_delta0.csv
+      hash: md5
+      md5: 9840f1260e087d73365e1170be668b6a
+      size: 58
+    - path: results/tables/rope_neural_ci.csv
+      hash: md5
+      md5: 33b038ac15c9feef239ed13e0011d7d7
+      size: 789
+    - path: results/tables/rope_summary_counts.csv
+      hash: md5
+      md5: 02bc719ff29e30895e882ec76c6f3a06
+      size: 160

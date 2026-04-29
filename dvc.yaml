@@ -193,3 +193,24 @@ stages:
       - results/tables/lme_icc.csv
       - results/tables/lme_best_model.csv
       - results/figures/lme_l2_forest.png
+  
+  ci_rope:
+    cmd: python src/ci_rope.py
+    deps:
+      - src/ci_rope.py
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+    params:
+      - params.yaml:
+          - tests_inter_distances.vowels
+          - ci_rope.n_boot
+          - ci_rope.rope_hz
+    outs:
+      - results/tables/rope_acoustic_ci.csv
+      - results/tables/rope_neural_ci.csv
+      - results/tables/rope_delta0.csv
+      - results/tables/rope_classification.csv
+      - results/tables/rope_summary_counts.csv
+      - results/figures/rope_acoustic_forest.png
+      - results/figures/rope_neural_forest.png
