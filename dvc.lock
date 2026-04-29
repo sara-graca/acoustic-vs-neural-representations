@@ -26,8 +26,8 @@ stages:
       size: 3681667
     - path: src/extract_acoustics.py
       hash: md5
-      md5: 48f4598308dd5dd8d44caaeae8dbe0ad
-      size: 2262
+      md5: 85056b3d8ab739fe85dd12ebd8258c3f
+      size: 2687
     params:
       params.yaml:
         acoustics:
@@ -37,15 +37,15 @@ stages:
     outs:
     - path: data/features/features_acoustic.csv
       hash: md5
-      md5: ef465e59f67c672f6de859ad1c0f6327
-      size: 5176833
+      md5: 1e1ccdf5639d875236d2477340bcd489
+      size: 5579001
   normalise:
     cmd: python src/normalise.py
     deps:
     - path: data/features/features_acoustic.csv
       hash: md5
-      md5: ef465e59f67c672f6de859ad1c0f6327
-      size: 5176833
+      md5: 1e1ccdf5639d875236d2477340bcd489
+      size: 5579001
     - path: data/features/features_whisper_layer20.npz
       hash: md5
       md5: 96721eec2b4465cb32adedad7630a0df
@@ -78,35 +78,35 @@ stages:
     outs:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer20_pca.npz
       hash: md5
-      md5: 36e72c744cad464576705b419d95ef86
+      md5: f0e2bce736c0a4fbf933b14860cef94f
       size: 4767664
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer10_pca.npz
       hash: md5
-      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      md5: 3997d24bf6a7a7a9caf3f7e31115c356
       size: 9534816
     - path: data/features/features_xlsr_layer20_pca.npz
       hash: md5
-      md5: 0a551bab3803385d7c66d77c7b6e6f1a
+      md5: 9b5c2b07d37354a9b0ec721475ce7253
       size: 9534816
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
   descriptive_acoustic:
     cmd: python src/descriptive_acoustic.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: src/descriptive_acoustic.py
       hash: md5
       md5: 909a884256bd3032ea969e7bf685835c
@@ -114,7 +114,7 @@ stages:
     outs:
     - path: results/figures/boxplot_F1_norm.pdf
       hash: md5
-      md5: d4af1c0da69dd5a85c5f3564364aae32
+      md5: 1218417132fe5001cab4bc8d30f43532
       size: 28598
     - path: results/figures/boxplot_F1_norm.png
       hash: md5
@@ -122,7 +122,7 @@ stages:
       size: 67560
     - path: results/figures/boxplot_F2_norm.pdf
       hash: md5
-      md5: 3475f67d3d4f81fdfa53a3196f379a35
+      md5: 74198ae8f5071dfd603161d52d145011
       size: 28043
     - path: results/figures/boxplot_F2_norm.png
       hash: md5
@@ -130,7 +130,7 @@ stages:
       size: 75283
     - path: results/figures/violin_F1_norm.pdf
       hash: md5
-      md5: 4d52699ce5bd75696c34df961a8750c6
+      md5: 8831fa46c6f7e2b4aaff9917fd302e93
       size: 32852
     - path: results/figures/violin_F1_norm.png
       hash: md5
@@ -138,7 +138,7 @@ stages:
       size: 75405
     - path: results/figures/violin_F2_norm.pdf
       hash: md5
-      md5: 4cb2fd3b52f9fb9dc075b569d5eb468b
+      md5: 736922c36ec14efe4abfc77b58a640cf
       size: 33112
     - path: results/figures/violin_F2_norm.png
       hash: md5
@@ -146,7 +146,7 @@ stages:
       size: 87251
     - path: results/figures/vowel_chart.pdf
       hash: md5
-      md5: 38f62eed45055036dd96c5d82a2e642d
+      md5: 58b13b9106c7c7235cbf68437bcfd808
       size: 40198
     - path: results/figures/vowel_chart.png
       hash: md5
@@ -161,27 +161,27 @@ stages:
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer20_pca.npz
       hash: md5
-      md5: 36e72c744cad464576705b419d95ef86
+      md5: f0e2bce736c0a4fbf933b14860cef94f
       size: 4767664
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer10_pca.npz
       hash: md5
-      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      md5: 3997d24bf6a7a7a9caf3f7e31115c356
       size: 9534816
     - path: data/features/features_xlsr_layer20_pca.npz
       hash: md5
-      md5: 0a551bab3803385d7c66d77c7b6e6f1a
+      md5: 9b5c2b07d37354a9b0ec721475ce7253
       size: 9534816
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/descriptive_neural.py
       hash: md5
@@ -202,40 +202,40 @@ stages:
       size: 148867
     - path: results/figures/neural_whisper_layer20_umap_gender.png
       hash: md5
-      md5: f109841cd449ce74ace4a2d1b9783c49
-      size: 252072
+      md5: f7ddc22e27b297c2d26eee79678dc852
+      size: 259328
     - path: results/figures/neural_whisper_layer20_umap_l1_status.png
       hash: md5
-      md5: c0c29acd00d2d3c313fe5171f80551a0
-      size: 246468
+      md5: a7c70c447f4a7425a6c9021421321aba
+      size: 253860
     - path: results/figures/neural_whisper_layer20_umap_phoneme.png
       hash: md5
-      md5: 5bd149030192c8eb44616df383b536fe
-      size: 284353
+      md5: edbff2740a25334087f857fb261429d9
+      size: 291653
     - path: results/figures/neural_whisper_layer4_pca_gender.png
       hash: md5
-      md5: 102a623bed63690e6732f0fc28423499
-      size: 640639
+      md5: 7dd8ff02c5b039179907efa94d910f96
+      size: 640582
     - path: results/figures/neural_whisper_layer4_pca_l1_status.png
       hash: md5
-      md5: f4df2856a10e692caf97d1651c837a93
-      size: 626636
+      md5: 8baf8e8f3277819821abf840a5e6b34a
+      size: 626571
     - path: results/figures/neural_whisper_layer4_pca_phoneme.png
       hash: md5
-      md5: acd04fac5a5f0b01093bfcdc2caed433
-      size: 684102
+      md5: d75fe86cce4d6684a218f53ebbbdc098
+      size: 684082
     - path: results/figures/neural_whisper_layer4_umap_gender.png
       hash: md5
-      md5: 8ca92d2c9de8bb2401d8e5a6fc0a8e76
-      size: 475603
+      md5: fbb2f68763a888e9e4551016596867ba
+      size: 498064
     - path: results/figures/neural_whisper_layer4_umap_l1_status.png
       hash: md5
-      md5: 8798e6a92db8bc2c53cf3406502478b1
-      size: 467428
+      md5: 7decc9d20bdca252215729aa50bc4c18
+      size: 489847
     - path: results/figures/neural_whisper_layer4_umap_phoneme.png
       hash: md5
-      md5: 43c11f40b9092a92dd9df418d116fa36
-      size: 501587
+      md5: 24f3860ac1efd734be763dc960efce7a
+      size: 526997
     - path: results/figures/neural_xlsr_layer10_pca_gender.png
       hash: md5
       md5: a3cd39811ad6c1719f960ae766b7604f
@@ -250,98 +250,98 @@ stages:
       size: 835670
     - path: results/figures/neural_xlsr_layer10_umap_gender.png
       hash: md5
-      md5: 01537c285e1b999bd4c64e4777b93679
-      size: 386603
+      md5: b39d831708890c7ffab44f7dbc19afaa
+      size: 388770
     - path: results/figures/neural_xlsr_layer10_umap_l1_status.png
       hash: md5
-      md5: ba3438db2b704e3046897081a568d4b3
-      size: 385830
+      md5: 3588bd3bc9f38c714e934ec2b7a47f79
+      size: 388629
     - path: results/figures/neural_xlsr_layer10_umap_phoneme.png
       hash: md5
-      md5: 3a2564b00a8516bc973800208f4b774f
-      size: 390403
+      md5: faa9ff5493c6164b95710141d716b7e2
+      size: 391320
     - path: results/figures/neural_xlsr_layer20_pca_gender.png
       hash: md5
-      md5: 0f0a88abe2d8c68fa52f7ee31e7d1502
-      size: 864819
+      md5: eb60b98bcb09b4511ade3019dc150f61
+      size: 864815
     - path: results/figures/neural_xlsr_layer20_pca_l1_status.png
       hash: md5
-      md5: 2831080a3676d8111f22180b5ca15152
-      size: 855752
+      md5: 463f35b7e445c65eb413b835523b8570
+      size: 855757
     - path: results/figures/neural_xlsr_layer20_pca_phoneme.png
       hash: md5
-      md5: a9baacce10d26938fedb1cd773c391df
-      size: 892612
+      md5: 6286251d4e443814c9c84c0bfae991b3
+      size: 892623
     - path: results/figures/neural_xlsr_layer20_umap_gender.png
       hash: md5
-      md5: 54ce668e5d99b65fc0662e1c772f6a1a
-      size: 273866
+      md5: 0b3a91a12c0a6e119e2b461f1119c025
+      size: 281708
     - path: results/figures/neural_xlsr_layer20_umap_l1_status.png
       hash: md5
-      md5: 95488091bc1b55bab749e2e5f667e85a
-      size: 288616
+      md5: df4a0209b6cce57767f95379ef0e38e7
+      size: 295789
     - path: results/figures/neural_xlsr_layer20_umap_phoneme.png
       hash: md5
-      md5: efdb27a466d7f6f9f7cfd1870ffeb7ae
-      size: 300601
+      md5: 2ba9c887df28cf32e10002af2465d521
+      size: 306828
     - path: results/figures/neural_xlsr_layer3_pca_gender.png
       hash: md5
-      md5: 04302ced9dcba8c726ab814499c6b363
-      size: 804379
+      md5: a049bb5466eba611ecc9c897c717b82d
+      size: 804380
     - path: results/figures/neural_xlsr_layer3_pca_l1_status.png
       hash: md5
-      md5: 2e3158de29f48f16cb915b0cb2d463b9
-      size: 793634
+      md5: c2a8a8db97ee418a36fc24b992cf076b
+      size: 793602
     - path: results/figures/neural_xlsr_layer3_pca_phoneme.png
       hash: md5
-      md5: e95e47940c2d582c007333ce68b06d81
-      size: 835968
+      md5: 2ee795801828f32624a04ffce0bff91e
+      size: 835813
     - path: results/figures/neural_xlsr_layer3_umap_gender.png
       hash: md5
-      md5: f4f9a0d9c6ab2b34118bb93bed707e8b
-      size: 203745
+      md5: e41461879295862f447e9fd5d91a08e2
+      size: 203466
     - path: results/figures/neural_xlsr_layer3_umap_l1_status.png
       hash: md5
-      md5: 6fb61d5646064c4c34f4f64d30cd08a3
-      size: 213076
+      md5: 9c15ca4c327da26501dabfde2d7c52b2
+      size: 213103
     - path: results/figures/neural_xlsr_layer3_umap_phoneme.png
       hash: md5
-      md5: 6721b02d84e68209be62219272b79d5e
-      size: 230080
+      md5: 062a801d617df9e9cee343ff99e3ae12
+      size: 229782
     - path: results/tables/neural_cosine_similarity.csv
       hash: md5
-      md5: 055544aa56c0b4340fc5409051b52f5a
+      md5: 1ab8124fb7e762d599c409ccd481dd49
       size: 219
     - path: results/tables/neural_variance_ratio.csv
       hash: md5
-      md5: 9a735c54db8a1f627154e5f6bf61f07e
+      md5: 8bee94a73c679d71ee0039b75eca52d3
       size: 706
   descriptive_crossrep:
     cmd: python src/descriptive_crossrep.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer20_pca.npz
       hash: md5
-      md5: 36e72c744cad464576705b419d95ef86
+      md5: f0e2bce736c0a4fbf933b14860cef94f
       size: 4767664
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer10_pca.npz
       hash: md5
-      md5: a7fbc4ddd9984798509ecbdd9ad94a7b
+      md5: 3997d24bf6a7a7a9caf3f7e31115c356
       size: 9534816
     - path: data/features/features_xlsr_layer20_pca.npz
       hash: md5
-      md5: 0a551bab3803385d7c66d77c7b6e6f1a
+      md5: 9b5c2b07d37354a9b0ec721475ce7253
       size: 9534816
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/descriptive_crossrep.py
       hash: md5
@@ -350,15 +350,15 @@ stages:
     outs:
     - path: results/tables/mantel_tests.csv
       hash: md5
-      md5: ea38c46dcde6c911dc2f7b4f6c93c330
-      size: 642
+      md5: fab01c643d308aff6fb0b239a2117cb9
+      size: 643
   tests_acoustic_l1l2:
     cmd: python src/tests_acoustic_l1l2.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: src/tests_acoustic_l1l2.py
       hash: md5
       md5: a0b244d9fd19311bfd3d2b122736739b
@@ -373,8 +373,8 @@ stages:
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: src/tests_acoustic_gender.py
       hash: md5
       md5: bf17fb23fda3027923a42ac707598ef0
@@ -389,15 +389,15 @@ stages:
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/tests_neural_l1l2.py
       hash: md5
@@ -406,22 +406,22 @@ stages:
     outs:
     - path: results/tables/l1_l2_neural_tests.csv
       hash: md5
-      md5: 8fa7c0cc7fb69394b8585c8b80b7cb3c
-      size: 916
+      md5: 7f8a8b90cef0509130b73a008ace9cc9
+      size: 914
   tests_inter_distances:
     cmd: python src/tests_inter_distances.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/tests_inter_distances.py
       hash: md5
@@ -462,30 +462,30 @@ stages:
     outs:
     - path: results/figures/distance_matrices.png
       hash: md5
-      md5: 7b131d73096346a1333dd375776139b3
-      size: 275668
+      md5: 6ad34972405793cde633bfb265335523
+      size: 274959
     - path: results/tables/distance_bootstrap_ci.csv
       hash: md5
-      md5: 631906e74b1d272c8603d6afb9318645
-      size: 1713
+      md5: e1a58348cc55f2250b35dff220b93a3c
+      size: 1715
     - path: results/tables/distance_mantel.csv
       hash: md5
-      md5: ea7eba2617a51923055b5cea002404e3
+      md5: bf5097e52334a10e8e8661120f628742
       size: 226
   nearest_centroid_classifier:
     cmd: python src/nearest_centroid_classifier.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/nearest_centroid_classifier.py
       hash: md5
@@ -511,34 +511,34 @@ stages:
       size: 105693
     - path: results/figures/confusion_whisper_layer4.png
       hash: md5
-      md5: ebf9c902189dbe6b6c99399de5b31f47
-      size: 119618
+      md5: 0e808fef463d9c4abecf504cb2823d31
+      size: 118784
     - path: results/figures/confusion_xlsr_layer3.png
       hash: md5
-      md5: f822abe75d7d7cd2d6672de0ad162027
-      size: 97556
+      md5: a120adda36669d5634114ead6317a7bf
+      size: 97441
     - path: results/tables/classifier_mcnemar.csv
       hash: md5
-      md5: 73461665af611a70c121ea05476d40cb
+      md5: 9fe37c2e334eea5178c744b37ea8f278
       size: 520
     - path: results/tables/classifier_summary.csv
       hash: md5
-      md5: 656b5361ba92caeebc527f0bc5b5e1c0
-      size: 377
+      md5: bd9d388de940f695ef13ba3fb1d03017
+      size: 376
   lme_models:
     cmd: python src/lme_models.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/lme_models.py
       hash: md5
@@ -565,11 +565,11 @@ stages:
       size: 61865
     - path: results/tables/lme_best_model.csv
       hash: md5
-      md5: 5864552adc099133b873b3c0fc34a409
+      md5: 0eaa6e75a35703e8eea417da8fe8a65d
       size: 417
     - path: results/tables/lme_fixed_effects.csv
       hash: md5
-      md5: 77948b5836c1f3b845c4a5dcaa576a49
+      md5: c3408bdeebe3b5e37deee224c4bf3e7f
       size: 4546
     - path: results/tables/lme_icc.csv
       hash: md5
@@ -577,26 +577,26 @@ stages:
       size: 282
     - path: results/tables/lme_lrt.csv
       hash: md5
-      md5: 05bab231434f29579b3e59f2bd8ecca8
-      size: 1628
+      md5: 3e5dd1922be1b6005489278f38d91272
+      size: 1632
     - path: results/tables/lme_summary.csv
       hash: md5
-      md5: 6d7550fc154f2eadd39ed1280ff41fbd
-      size: 2690
+      md5: 1d8d975bf909503c1380d1013a6f5942
+      size: 2696
   ci_rope:
     cmd: python src/ci_rope.py
     deps:
     - path: data/features/features_acoustic_norm.csv
       hash: md5
-      md5: 9b83c2842d94385c23c6b4f99debbd7b
-      size: 6030893
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
     - path: data/features/features_whisper_layer4_pca.npz
       hash: md5
-      md5: 6812113d5b6b60bc601d01eafb0a9fd5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
       size: 4767664
     - path: data/features/features_xlsr_layer3_pca.npz
       hash: md5
-      md5: 1065305448c3ae52274c87a65e507655
+      md5: 533843f76a86aa53bd7e9423adfa27e6
       size: 9534816
     - path: src/ci_rope.py
       hash: md5
@@ -624,25 +624,25 @@ stages:
       size: 55433
     - path: results/figures/rope_neural_forest.png
       hash: md5
-      md5: 0501ac41fb51a392d3275f9da8635bd5
-      size: 65624
+      md5: cd96dc7ee55e9192c301119a1a8c285e
+      size: 65217
     - path: results/tables/rope_acoustic_ci.csv
       hash: md5
       md5: 1b9cd035296c294ce80c4228b8eac1f7
       size: 849
     - path: results/tables/rope_classification.csv
       hash: md5
-      md5: f1382e8423c72f7727fe071b5a72efd9
-      size: 3044
+      md5: 8464b17859e0c1d87d350217b8a49eb5
+      size: 3042
     - path: results/tables/rope_delta0.csv
       hash: md5
-      md5: 9840f1260e087d73365e1170be668b6a
+      md5: 94bdb9208c6049d28d9f8b81c495c10f
       size: 58
     - path: results/tables/rope_neural_ci.csv
       hash: md5
-      md5: 33b038ac15c9feef239ed13e0011d7d7
-      size: 789
+      md5: fc9522d1bf35022798bdd71634b1dd55
+      size: 784
     - path: results/tables/rope_summary_counts.csv
       hash: md5
-      md5: 02bc719ff29e30895e882ec76c6f3a06
+      md5: 881a5505ddcf06fbc8d57f8d9c37017a
       size: 160
