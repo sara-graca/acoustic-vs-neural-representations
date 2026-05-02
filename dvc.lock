@@ -646,3 +646,130 @@ stages:
       hash: md5
       md5: 881a5505ddcf06fbc8d57f8d9c37017a
       size: 160
+  clustering_vowels:
+    cmd: python src/clustering_vowels.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 533843f76a86aa53bd7e9423adfa27e6
+      size: 9534816
+    - path: src/clustering_vowels.py
+      hash: md5
+      md5: e1bc70921209fff374539633ea93e062
+      size: 11971
+    params:
+      params.yaml:
+        clustering_vowels.n_top_consonants: 10
+        tests_inter_distances.vowels:
+        - a
+        - e
+        - i
+        - o
+        - u
+        - y
+        - ø
+        - ɛ
+        - ɑ
+        - ə
+    outs:
+    - path: results/figures/cluster_vc_acoustic.png
+      hash: md5
+      md5: 732e75a2a1ad17874250b3ac95a5af7c
+      size: 31447
+    - path: results/figures/cluster_vc_whisper_layer4.png
+      hash: md5
+      md5: 95dccc586a4d02661d57a95d2ea911f2
+      size: 35361
+    - path: results/figures/cluster_vc_xlsr_layer3.png
+      hash: md5
+      md5: f5bbc51623899e1ae3527a0dee39ade1
+      size: 34923
+    - path: results/figures/cluster_vowel_acoustic.png
+      hash: md5
+      md5: 8572915d4f9e33253ef31bdb88c8a79c
+      size: 31527
+    - path: results/figures/cluster_vowel_acoustic_f1only.png
+      hash: md5
+      md5: ee5e8dbd083c5a9de1a747d7b688d60a
+      size: 31515
+    - path: results/figures/cluster_vowel_whisper_layer4.png
+      hash: md5
+      md5: 19357661deb515d01252519970624664
+      size: 30636
+    - path: results/figures/cluster_vowel_xlsr_layer3.png
+      hash: md5
+      md5: be44d9c4611b792da44587743a585b4d
+      size: 33114
+    - path: results/tables/clustering_vowel_ari.csv
+      hash: md5
+      md5: 204d94440937382f162f86dbb2a8c255
+      size: 391
+  clustering_speakers:
+    cmd: python src/clustering_speakers.py
+    deps:
+    - path: data/features/features_acoustic_norm.csv
+      hash: md5
+      md5: d71ac27efd43f7362f89510909662ec0
+      size: 6430187
+    - path: data/features/features_whisper_layer4_pca.npz
+      hash: md5
+      md5: 0e6b6a8a8e5036cd69ec19fedec7f7f0
+      size: 4767664
+    - path: data/features/features_xlsr_layer3_pca.npz
+      hash: md5
+      md5: 533843f76a86aa53bd7e9423adfa27e6
+      size: 9534816
+    - path: src/clustering_speakers.py
+      hash: md5
+      md5: ce756ffc56398afba63310dfaf949720
+      size: 8079
+    params:
+      params.yaml:
+        tests_inter_distances.vowels:
+        - a
+        - e
+        - i
+        - o
+        - u
+        - y
+        - ø
+        - ɛ
+        - ɑ
+        - ə
+    outs:
+    - path: results/figures/cluster_speaker_acoustic_L1L2.png
+      hash: md5
+      md5: 1d383bd3138be4575cd9a1c2b3ea1628
+      size: 24375
+    - path: results/figures/cluster_speaker_acoustic_gender.png
+      hash: md5
+      md5: bfcafef5378e8ea68813109993c85a9e
+      size: 24052
+    - path: results/figures/cluster_speaker_whisper_layer4_L1L2.png
+      hash: md5
+      md5: 7b30e6a21c84be1c130ab9d8efeeca77
+      size: 28967
+    - path: results/figures/cluster_speaker_whisper_layer4_gender.png
+      hash: md5
+      md5: 7c455a902e027ec95bcaa83813a66a31
+      size: 28581
+    - path: results/figures/cluster_speaker_xlsr_layer3_L1L2.png
+      hash: md5
+      md5: a8793e9201da359f2e83b6c82740c44f
+      size: 27916
+    - path: results/figures/cluster_speaker_xlsr_layer3_gender.png
+      hash: md5
+      md5: 7e1b0d16d4793944505d8a94b5a58d7c
+      size: 27755
+    - path: results/tables/clustering_speaker_ari.csv
+      hash: md5
+      md5: b916efcdb672590be1a98908d0dd6467
+      size: 161

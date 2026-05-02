@@ -214,3 +214,43 @@ stages:
       - results/tables/rope_summary_counts.csv
       - results/figures/rope_acoustic_forest.png
       - results/figures/rope_neural_forest.png
+  
+  clustering_vowels:
+    cmd: python src/clustering_vowels.py
+    deps:
+      - src/clustering_vowels.py
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+    params:
+      - params.yaml:
+          - tests_inter_distances.vowels
+          - clustering_vowels.n_top_consonants
+    outs:
+      - results/tables/clustering_vowel_ari.csv
+      - results/figures/cluster_vowel_acoustic.png
+      - results/figures/cluster_vowel_acoustic_f1only.png
+      - results/figures/cluster_vowel_whisper_layer4.png
+      - results/figures/cluster_vowel_xlsr_layer3.png
+      - results/figures/cluster_vc_acoustic.png
+      - results/figures/cluster_vc_whisper_layer4.png
+      - results/figures/cluster_vc_xlsr_layer3.png
+
+  clustering_speakers:
+    cmd: python src/clustering_speakers.py
+    deps:
+      - src/clustering_speakers.py
+      - data/features/features_acoustic_norm.csv
+      - data/features/features_whisper_layer4_pca.npz
+      - data/features/features_xlsr_layer3_pca.npz
+    params:
+      - params.yaml:
+          - tests_inter_distances.vowels
+    outs:
+      - results/tables/clustering_speaker_ari.csv
+      - results/figures/cluster_speaker_acoustic_L1L2.png
+      - results/figures/cluster_speaker_acoustic_gender.png
+      - results/figures/cluster_speaker_whisper_layer4_L1L2.png
+      - results/figures/cluster_speaker_whisper_layer4_gender.png
+      - results/figures/cluster_speaker_xlsr_layer3_L1L2.png
+      - results/figures/cluster_speaker_xlsr_layer3_gender.png

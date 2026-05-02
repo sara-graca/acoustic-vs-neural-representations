@@ -34,3 +34,6 @@ lme_models:
 ci_rope:
   n_boot: 2000
   rope_hz: 20.0
+
+clustering_vowels:
+  n_top_consonants: 10
